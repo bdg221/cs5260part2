@@ -184,7 +184,7 @@ def country_scheduler(country_name, resources_file,
   final_solutions = []
   final_solutions.append({'name': 'root', 'node': node})
 
-  """ Number of rounds will be set to 5 for right now"""
+  """ Number of rounds will be set to 100 for right now"""
   for index in range(100):
     logging.info("### ROUND "+str(index +1)+ " ###")
   # do we need to use the initial_world_state or just the current_world_state?
@@ -193,9 +193,10 @@ def country_scheduler(country_name, resources_file,
         self_country = country_states[i]
         logging.debug("#### country state = "+self_country.name)
         solutions, schedule_evaluator, state_evaluator = run_scheduler(actions[self_country.name], current_world_state, resources, self_country, num_schedules, depth_bound, frontier_size)
-        # bdg add datetime to output files so they aren't overwritten
+        # add datetime to output files so they aren't overwritten
         current_dt = datetime.now()
 
+        # if round 1 then save each countries' initial schedule for comparison against final actions
         if index == 0:
           Schedule.write_solutions(solutions, schedule_evaluator.expected_utility, self_country, "sub_call_"+i+
                                  output_file + str(current_dt))
@@ -223,31 +224,15 @@ def country_scheduler(country_name, resources_file,
     state_quality_fn=state_evaluator.state_quality
   )
 
+  # save the final information in both CSV and regular schedule format
   Schedule.write_turn_solutions(final_solutions, schedule_evaluator.state_quality_fn, "turn_based_"+output_file + str(current_dt))
   Schedule.write_turn_solutions_csv(final_solutions, schedule_evaluator.state_quality_fn, "turn_based_"+output_file + str(current_dt)+".csv")
 
 
 
-  # #bdg add datetime to output files so they aren't overwritten
-  # current_dt = datetime.now()
-  # state_list = []
-  # for i in range(final_solutions):
-  #   state_list.append(final_solutions[i].STATE)
-  # solution = Solution(final_solutions[len(final_solutions)-1], state_list)
-  # Schedule.write_turn__solutions(solutions, schedule_evaluator.expected_utility, self_country, output_file+str(current_dt))
-  #
-  # best_eu = None
-  # best_solution = None
-  # for eu, solution in solutions.items():
-  #   if not best_eu or eu > best_eu:
-  #     best_eu = eu
-  #     best_solution = solution
-  # print("#######")
-  # print(best_solution.PATH[1].PARENT_ACTION.to_string(self_country))
-  #
-  # print("#######")
-  # Schedule.write_csv(best_solution, state_evaluator.state_quality, schedule_evaluator.expected_utility, self_country, "best_solution_"+str(current_dt)+".csv")
-
+# This function was created from code in the country_scheduler
+# This allows for building and searching a graph for a specific country
+# with a specific root node.
 def run_scheduler(all_actions, country_states, resources, self_country, num_schedules, depth_bound, frontier_size):
   if CONFIG.getboolean("Actions", "Shuffle"):
     random.shuffle(all_actions)
@@ -264,8 +249,6 @@ def run_scheduler(all_actions, country_states, resources, self_country, num_sche
   #logging.info("Evaluation functions established")
 
   start_country_state = initial_country_states[self_country.name]
-  #logging.debug("Start Agent Country State = {}".format(start_country_state))
-  #logging.info("Start Agent Country State Quality = {}".format(state_evaluator.state_quality(start_country_state)))
 
   solutions = {}
   for _schedule_count in range(1, num_schedules + 1):
@@ -277,18 +260,14 @@ def run_scheduler(all_actions, country_states, resources, self_country, num_sche
 
     strategy = search_strategy_factory(CONFIG.get("Search", "Strategy"))
     enable_reached = CONFIG.getboolean("Search", "EnableReached")
-    #logging.info("Executing {} strategy...".format(strategy.__name__))
-    #logging.info("Reached Enabled = {}".format(enable_reached))
+
     solution = graph.search(country_states, strategy((not enable_reached), depth_bound, frontier_size))
 
     final_state = solution.NODE.STATE
     final_country_state = final_state[self_country.name]
-    #logging.debug("Final Agent Country State = {}".format(final_country_state))
-    #logging.info("Final Agent Country State Quality = {}".format(state_evaluator.state_quality(final_country_state)))
 
     schedule = Schedule(solution.NODE)
     expected_utility = schedule_evaluator.expected_utility(start_country_state, schedule)
-    #logging.info("Schedule Expected Utility = {}".format(expected_utility))
     solutions[expected_utility] = solution
   return solutions, schedule_evaluator, state_evaluator
 

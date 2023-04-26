@@ -22,15 +22,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Run `main.py` to generate a schedule (a full arguments list is included below).
+4. Run `main.py` to generate a result of 100 rounds of actions by each country (a full arguments list is included below).
 ```
 python src/WorldTraderSim/main.py
 ```
+Note: To change the depth used when determining the action of a country, be sure to add the -d flag. For example,
+```
+python src/WorldTraderSim/main.py -d 50
+```
 
-5. Graph the best schedule using `graph_schedule.py`.
-```
-python src/WorldTraderSim/graph_schedule.py
-```
 
 ### Configuration Tuning
 
