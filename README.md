@@ -52,7 +52,8 @@ The following arguments are supported to change simulation behavior:
 
 **NOTE:** If increasing depth-bound, pay attention to logs to see whether the "Max Frontier Length" is staying under "Max Frontier Size". When the frontier size cannot grow to accomodate newly expanded nodes, the output of search strategies can be impacted. While the performance can be better, the results often aren't. This is particularly true for the default search strategy, HeuristicDepthFirstSearch.
 
-Using a configuratoin file, the following global options can be changed:
+
+Using a configuration file, the following global options can be changed:
 | Section | Option | Usage | Default |
 | ------- | ------ | ----- | ------- |
 | Actions | Shuffle | Shuffle the list of all actions to avoid deterministic outcomes | True |

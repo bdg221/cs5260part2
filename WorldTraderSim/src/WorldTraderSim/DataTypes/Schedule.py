@@ -61,7 +61,58 @@ class Schedule:
             file.write("  " + node.PARENT_ACTION.to_string(self_country) + " EU: {}\n".format(eu))
         file.write("]")
         solutions_count += 1
-    
+
+  @staticmethod
+  def write_turn_solutions(solutions: [dict], expected_utility_fn: Callable[[Country, Schedule], float], output_file_name: str, output_dir: Union[str, PathLike, None] = None):
+    if not output_dir:
+      module_path = path.dirname(path.abspath(__file__))
+      output_dir =  path.join(module_path, "../data/schedules/")
+
+    with open(output_dir+output_file_name, "w") as file:
+      file.write("[\n")
+      for i in range(len(solutions)):
+        node = solutions[i]['node']
+        if node.PARENT_ACTION:
+            file.write("  "+solutions[i]['name'] + " " + node.PARENT_ACTION.to_string(node.STATE[solutions[i]['name']]) + " State Qualities: ")
+            for country in node.STATE.keys():
+              file.write(country + " " + str(expected_utility_fn(node.STATE[country])) + ", ")
+            file.write("\n")
+      file.write("]")
+
+    countries = list(solutions[0]["node"].STATE.keys())
+    for a in range(len(countries)):
+      country_file_name = "turn_based_final_"+countries[a]+".txt"
+      with open(output_dir+country_file_name, "w") as file:
+        for i in range(len(solutions)):
+          if solutions[i]['name'] == countries[a]:
+            node = solutions[i]['node']
+            file.write(node.PARENT_ACTION.to_string(node.STATE[countries[a]]) + " State Quality: "+str(expected_utility_fn(node.STATE[countries[a]]))+ "\n")
+
+
+  @staticmethod
+  def write_turn_solutions_csv(solutions: [Dict[str, Node]], expected_utility_fn: Callable[[Country, Schedule], float], output_file_name: str, output_dir: Union[str, PathLike, None] = None):
+    if not output_dir:
+      module_path = path.dirname(path.abspath(__file__))
+      output_dir =  path.join(module_path, "../data/schedules/")
+
+
+    with open(output_dir+output_file_name, "w") as file:
+      countries = list(solutions[0]["node"].STATE.keys())
+      for i in range(len(countries)):
+        if i < len(countries)-1:
+          file.write(countries[i]+",")
+        else:
+          file.write(countries[i]+"\n")
+      for i in range(len(solutions)):
+        node = solutions[i]['node']
+        countries = list(node.STATE.keys())
+        for a in range(len(countries)):
+          if a < len(countries)-1:
+            file.write(str(expected_utility_fn(node.STATE[countries[a]])) + ",")
+          else:
+            file.write(str(expected_utility_fn(node.STATE[countries[a]])) +"\n")
+
+
   @staticmethod
   def write_csv(solution: Solution, state_quality_fn: Callable[[Country], float], expected_utility_fn: Callable[[Country, Schedule], float], self_country: Country, output_file_name: str, output_dir: Union[str, PathLike, None] = None):
     if not output_dir:

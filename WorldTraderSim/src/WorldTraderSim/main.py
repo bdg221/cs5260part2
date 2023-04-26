@@ -6,12 +6,13 @@ import logging
 import os
 import random
 from typing import Callable, Dict, List
+from datetime import datetime
 
 # Local Modules
 from DataTypes import \
   Country, Heuristic, Node, \
   ResourceQuantity, ResourceTemplate, Schedule, \
-  TransferAction, TransformAction, TransformTemplate
+  TransferAction, TransformAction, TransformTemplate, Solution
 from DataTypes.TransferAction import TransferDirection
 from Parsers import StateParser, TransformTemplateParser
 from Evaluators import StateEvaluator, ScheduleEvaluator
@@ -144,21 +145,114 @@ def country_scheduler(country_name, resources_file,
   if not self_country:
     raise Exception("Agent country {} not defined in initial state".format(country_name))
 
-  logging.info("Building transfer actions...")
-  transfer_actions = build_transfer_actions(resources, country_states, self_country)
-  logging.info("Transfer actions built")
+  logging.info("Building actions for all countries ...")
+  # transfer_actions = build_transfer_actions(resources, country_states, self_country)
+  # logging.info("Actions built")
+  #
+  # logging.info("Building transform actions...")
+  # transform_actions = build_transform_actions(transform_templates, target_country=self_country)
+  # logging.info("Transform actions built")
+  #
+  # # Combine all the actions into a single list
+  # # Shuffle the list randomly so as not to have any implied bias to actions via ordering
+  # all_actions = transfer_actions + transform_actions
 
-  logging.info("Building transform actions...")
-  transform_actions = build_transform_actions(transform_templates, target_country=self_country)
-  logging.info("Transform actions built")
 
-  # Combine all the actions into a single list
-  # Shuffle the list randomly so as not to have any implied bias to actions via ordering
-  all_actions = transfer_actions + transform_actions
+  actions = {}
+# BUILD ACTIONS FOR EACH COUNTRY INTO A DICTIONARY country_name : all_actions
+  for country in country_states.keys():
+    transfer_actions = build_transfer_actions(resources, country_states, country_states.get(country))
+    transform_actions = build_transform_actions(transform_templates, target_country=country_states.get(country))
+    all_actions = transfer_actions + transform_actions
+    actions[country] = all_actions
+  logging.info("Actions built")
+  #bdg - moved processing code to a separate function to make turn-based calls easier
+  # now just call run_scheduler
+
+  # solutions, schedule_evaluator, state_evaluator = run_scheduler(all_actions, country_states, resources, self_country,
+  #                                                                num_schedules, depth_bound, frontier_size)
+
+
+  current_world_state = copy.deepcopy(country_states)
+  initial_world_state = copy.deepcopy(country_states)
+  node = Node(current_world_state, None, None, 0.0)
+
+  # final_solutions will contain the steps for the world schedule
+  # it will be a list of dictionaries where the dictionaries include
+  # {name_of_country} : NODE
+  # the initial entry will be "root": node
+  final_solutions = []
+  final_solutions.append({'name': 'root', 'node': node})
+
+  """ Number of rounds will be set to 5 for right now"""
+  for index in range(100):
+    logging.info("### ROUND "+str(index +1)+ " ###")
+  # do we need to use the initial_world_state or just the current_world_state?
+
+    for i in country_states.keys():
+        self_country = country_states[i]
+        logging.debug("#### country state = "+self_country.name)
+        solutions, schedule_evaluator, state_evaluator = run_scheduler(actions[self_country.name], current_world_state, resources, self_country, num_schedules, depth_bound, frontier_size)
+        # bdg add datetime to output files so they aren't overwritten
+        current_dt = datetime.now()
+
+        if index == 0:
+          Schedule.write_solutions(solutions, schedule_evaluator.expected_utility, self_country, "sub_call_"+i+
+                                 output_file + str(current_dt))
+
+        best_eu = None
+        best_solution = None
+        for eu, solution in solutions.items():
+          if not best_eu or eu > best_eu:
+            best_eu = eu
+            best_solution = solution
+
+        # get first action from the best solution and perform the action on the current_world_state
+        # also add the action to the
+        # best_solution.PATH[1] = Node
+        next_action = best_solution.PATH[1].PARENT_ACTION
+        current_world_state = next_action.apply(current_world_state)
+        final_solutions.append({'name': i, 'node' : Node(current_world_state, final_solutions[len(final_solutions)-1]['node'], next_action, 0)})
+
+        # Schedule.write_csv(best_solution, state_evaluator.state_quality, schedule_evaluator.expected_utility,
+        #                    self_country, "best_sub_solution_for_"+ i + + str(current_dt) + ".csv")
+
+  current_dt = datetime.now()
+  schedule_evaluator = ScheduleEvaluator(
+    initial_state=initial_world_state,
+    state_quality_fn=state_evaluator.state_quality
+  )
+
+  Schedule.write_turn_solutions(final_solutions, schedule_evaluator.state_quality_fn, "turn_based_"+output_file + str(current_dt))
+  Schedule.write_turn_solutions_csv(final_solutions, schedule_evaluator.state_quality_fn, "turn_based_"+output_file + str(current_dt)+".csv")
+
+
+
+  # #bdg add datetime to output files so they aren't overwritten
+  # current_dt = datetime.now()
+  # state_list = []
+  # for i in range(final_solutions):
+  #   state_list.append(final_solutions[i].STATE)
+  # solution = Solution(final_solutions[len(final_solutions)-1], state_list)
+  # Schedule.write_turn__solutions(solutions, schedule_evaluator.expected_utility, self_country, output_file+str(current_dt))
+  #
+  # best_eu = None
+  # best_solution = None
+  # for eu, solution in solutions.items():
+  #   if not best_eu or eu > best_eu:
+  #     best_eu = eu
+  #     best_solution = solution
+  # print("#######")
+  # print(best_solution.PATH[1].PARENT_ACTION.to_string(self_country))
+  #
+  # print("#######")
+  # Schedule.write_csv(best_solution, state_evaluator.state_quality, schedule_evaluator.expected_utility, self_country, "best_solution_"+str(current_dt)+".csv")
+
+def run_scheduler(all_actions, country_states, resources, self_country, num_schedules, depth_bound, frontier_size):
   if CONFIG.getboolean("Actions", "Shuffle"):
     random.shuffle(all_actions)
-  
-  logging.info("Establishing evaluation functions...")
+
+  #logging.info("Establishing evaluation functions...")
   initial_country_states = copy.deepcopy(country_states)
   state_evaluator = StateEvaluator(resources)
   schedule_evaluator = ScheduleEvaluator(
@@ -167,15 +261,15 @@ def country_scheduler(country_name, resources_file,
   )
   utility_fn: Callable[[Node], float] = lambda node: schedule_evaluator.expected_utility(self_country, Schedule(node))
   heuristic = Heuristic(utility_fn)
-  logging.info("Evaluation functions established")
+  #logging.info("Evaluation functions established")
 
   start_country_state = initial_country_states[self_country.name]
-  logging.debug("Start Agent Country State = {}".format(start_country_state))
-  logging.info("Start Agent Country State Quality = {}".format(state_evaluator.state_quality(start_country_state)))
-  
+  #logging.debug("Start Agent Country State = {}".format(start_country_state))
+  #logging.info("Start Agent Country State Quality = {}".format(state_evaluator.state_quality(start_country_state)))
+
   solutions = {}
-  for _schedule_count in range(1, num_schedules+1):
-    logging.info("Building search graph...")
+  for _schedule_count in range(1, num_schedules + 1):
+    #logging.info("Building search graph...")
     shuffled_all_actions = copy.deepcopy(all_actions)
     if CONFIG.getboolean("Actions", "Shuffle"):
       random.shuffle(shuffled_all_actions)
@@ -183,30 +277,20 @@ def country_scheduler(country_name, resources_file,
 
     strategy = search_strategy_factory(CONFIG.get("Search", "Strategy"))
     enable_reached = CONFIG.getboolean("Search", "EnableReached")
-    logging.info("Executing {} strategy...".format(strategy.__name__))
-    logging.info("Reached Enabled = {}".format(enable_reached))
+    #logging.info("Executing {} strategy...".format(strategy.__name__))
+    #logging.info("Reached Enabled = {}".format(enable_reached))
     solution = graph.search(country_states, strategy((not enable_reached), depth_bound, frontier_size))
-    
+
     final_state = solution.NODE.STATE
     final_country_state = final_state[self_country.name]
-    logging.debug("Final Agent Country State = {}".format(final_country_state))
-    logging.info("Final Agent Country State Quality = {}".format(state_evaluator.state_quality(final_country_state)))
+    #logging.debug("Final Agent Country State = {}".format(final_country_state))
+    #logging.info("Final Agent Country State Quality = {}".format(state_evaluator.state_quality(final_country_state)))
 
     schedule = Schedule(solution.NODE)
     expected_utility = schedule_evaluator.expected_utility(start_country_state, schedule)
-    logging.info("Schedule Expected Utility = {}".format(expected_utility))
+    #logging.info("Schedule Expected Utility = {}".format(expected_utility))
     solutions[expected_utility] = solution
-
-  Schedule.write_solutions(solutions, schedule_evaluator.expected_utility, self_country, output_file)
-
-  best_eu = None
-  best_solution = None
-  for eu, solution in solutions.items():
-    if not best_eu or eu > best_eu:
-      best_eu = eu
-      best_solution = solution
-
-  Schedule.write_csv(best_solution, state_evaluator.state_quality, schedule_evaluator.expected_utility, self_country, "best_solution.csv")
+  return solutions, schedule_evaluator, state_evaluator
 
 def parseCmdLineArgs():
   parser = argparse.ArgumentParser (description="WorldTraderSim")

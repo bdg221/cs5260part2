@@ -1,0 +1,100 @@
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.05
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.099999999999994
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.150000000000006
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 32.2
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.25
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.300000000000004
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.35
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.400000000000006
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 32.45
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.5
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.550000000000004
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 32.6
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.65
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.699999999999996
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.75
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 32.8
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.849999999999994
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.9
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 32.949999999999996
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.0
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.05
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 33.099999999999994
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.150000000000006
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.2
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 33.25
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.300000000000004
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.35
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 33.400000000000006
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 33.45
+(TRANSFER Europa self ((Housing 1))) State Quality: 34.35000000000001
+(TRANSFER Europa self ((Housing 1))) State Quality: 35.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 36.150000000000006
+(TRANSFER Europa self ((Housing 1))) State Quality: 37.050000000000004
+(TRANSFER Europa self ((Housing 1))) State Quality: 37.95
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 38.85000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 39.75000000000001
+(TRANSFER Pandora self ((Housing 1))) State Quality: 40.650000000000006
+(TRANSFER Pandora self ((Housing 1))) State Quality: 41.550000000000004
+(TRANSFER Pandora self ((Housing 1))) State Quality: 42.45
+(TRANSFER Pandora self ((Housing 1))) State Quality: 43.35000000000001
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 44.25000000000001
+(TRANSFER Pandora self ((Housing 1))) State Quality: 45.150000000000006
+(TRANSFER Pandora self ((Housing 1))) State Quality: 46.05000000000001
+(TRANSFER Pandora self ((Housing 1))) State Quality: 46.95
+(TRANSFER Pandora self ((Housing 1))) State Quality: 47.85000000000001
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 48.75000000000001
+(TRANSFER Pandora self ((Housing 1))) State Quality: 49.650000000000006
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 50.55000000000001
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 51.45
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 52.35000000000001
+(TRANSFER Pandora self ((Housing 1))) State Quality: 53.25000000000001
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 54.150000000000006
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 55.05000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 55.95
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 56.85000000000001
+(TRANSFER Neuronia self ((Housing 1))) State Quality: 57.75000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 58.650000000000006
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 59.550000000000004
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 60.45000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 61.35000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 62.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 62.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 62.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 62.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 62.25000000000001
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 63.150000000000006
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 63.150000000000006
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 63.150000000000006
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05
+(TRANSFER Atlantis self ((Housing 1))) State Quality: 64.05

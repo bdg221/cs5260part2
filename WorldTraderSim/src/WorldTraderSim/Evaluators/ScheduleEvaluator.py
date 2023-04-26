@@ -34,7 +34,8 @@ class ScheduleEvaluator:
     gamma = SCHEDULE_LENGTH_IMPACT
     N = schedule.get_steps()
     R = self.undiscounted_reward
-    return float(gamma * N * R(country, schedule))
+    exponential = gamma ** N
+    return float(exponential * R(country, schedule))
 
   def logistic_success(self, country: Country, schedule: Schedule) -> float:
     logging.debug(self.logistic_success.__name__)
@@ -49,7 +50,7 @@ class ScheduleEvaluator:
 
     try:
       exponent =  ( -k * ( x - x_0 ) )
-      power = math.pow(math.e, exponent)
+      power = math.e ** exponent
     except OverflowError:
       power = float("inf")
 

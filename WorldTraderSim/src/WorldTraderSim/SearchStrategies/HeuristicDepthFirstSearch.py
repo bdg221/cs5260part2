@@ -42,9 +42,9 @@ class HeuristicDepthFirstSearch(SearchStrategy):
             if new_frontier_length > max_frontier_length:
                max_frontier_length = new_frontier_length
          else:
-            logging.info(f"Max Frontier Length = {max_frontier_length}")
+            logging.debug(f"Max Frontier Length = {max_frontier_length}")
             return Solution(node, visited)
-      logging.info(f"Max Frontier Length {max_frontier_length}")
+      logging.debug(f"Max Frontier Length {max_frontier_length}")
       return Solution(node, visited)
 
    def search_without_reached(self, country_states: Dict[str, Country], actions: List[Action], heuristic: Heuristic) -> Solution:
@@ -62,6 +62,6 @@ class HeuristicDepthFirstSearch(SearchStrategy):
       return Solution(node, visited)
 
    def search(self, country_states: Dict[str, Country], actions: List[Action], heuristic: Heuristic) -> Solution:
-      logging.info(f"Max Frontier Size = {self.MAX_FRONTIER_SIZE}")
+      logging.debug(f"Max Frontier Size = {self.MAX_FRONTIER_SIZE}")
       search_function = self.search_without_reached if self.TREE_BASED_SEARCH else self.search_with_reached
       return search_function(country_states, actions, heuristic)
