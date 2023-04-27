@@ -9,7 +9,7 @@ from DataTypes import Country, Schedule
 # Numeric Constants
 # TODO - allow config at runtime
 SCHEDULE_FAILED_IMPACT=-0.25
-SCHEDULE_LENGTH_IMPACT=0.9
+SCHEDULE_LENGTH_IMPACT=0.999
 
 class ScheduleEvaluator:
   def __init__(self, initial_state: Dict[str, Country], state_quality_fn: Callable[[Country], float]) -> None:

@@ -1,6 +1,6 @@
 Country,Population,MetallicElements,Timber,MetallicAlloys,MetallicAlloysWaste,Electronics,ElectronicsWaste,Housing,HousingWaste
-Atlantis,1000,100,10,0,0,0,0,0,0
-Europa,1000,10000,500,0,0,0,0,0,0
-Pandora,100,1000,50,0,0,0,0,0,0
-Neuronia,100,1000,50,0,0,0,0,0,0
-Brick,100,50,50,0,0,0,0,0,0
+Atlantis,100,100,50,0,0,0,0,0,0
+Europa,100,100,50,0,0,0,0,0,0
+Pandora,100,100,50,0,0,0,0,0,0
+Neuronia,100,100,50,0,0,0,0,0,0
+Brick,100,100,50,0,0,0,0,0,0

@@ -1,0 +1,100 @@
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.69999999999993
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.74999999999994
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.8
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.85
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 302.9
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.95
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.0
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.05
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 303.1
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.15
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.20000000000005
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 303.25000000000006
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.3
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.34999999999997
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.40000000000003
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 303.45000000000005
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.5
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.55
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.6
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.65000000000003
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.70000000000005
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.75
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.8
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.85
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.90000000000003
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.95000000000005
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.0
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 304.05
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.1
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 304.15
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 304.20000000000005
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 304.25000000000006
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.3
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.34999999999997
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.40000000000003
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 304.45000000000005
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.5
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.55
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.6
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 304.65000000000003
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.90000000000003
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 302.95
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 303.0
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 301.25
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 299.5
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 297.75
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 297.79999999999995
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 296.85
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 296.90000000000003
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 296.95
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 297.0
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 297.05
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 295.3
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 295.35
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 295.4
+(TRANSFORM alloys self (INPUTS (Population 1) (MetallicElements 2)) (OUTPUTS (Population 1) (MetallicAlloys 1) (MetallicAlloysWaste 1))) State Quality: 293.65000000000003
+(TRANSFORM housing self (INPUTS (Population 5) (MetallicElements 1) (Timber 5) (MetallicAlloys 3)) (OUTPUTS (Housing 1) (HousingWaste 1) (Population 5))) State Quality: 293.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 295.50000000000006
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 297.30000000000007
+(TRANSFER Brick self ((Housing 2))) State Quality: 299.1000000000001
+(TRANSFER Brick self ((Housing 2))) State Quality: 300.9000000000001
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Neuronia self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
+(TRANSFER Brick self ((Housing 2))) State Quality: 302.70000000000005
